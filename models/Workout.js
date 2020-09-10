@@ -2,8 +2,9 @@ const { model, Schema } = require('mongoose')
 
 const Workout = new Schema ({
     day: {
-        type: String,
-        required: true
+        type: Date,
+        default: Date.now,
+        
 
     },
     exercises: [{
@@ -36,7 +37,7 @@ const Workout = new Schema ({
         },
         distance: {
             type: Number,
-            required: false,
+            required: false
 
 
         }
