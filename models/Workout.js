@@ -5,7 +5,7 @@ const Workout = new Schema ({
         type: String,
         required: true
 
-    }
+    },
     exercises: [{
         name: {
             type: String,
