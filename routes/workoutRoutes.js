@@ -20,7 +20,7 @@ router.post('/workouts', (req,res) => {
 // Put one Workout
 router.put('/workouts/:id', (req, res) => {
     Workout.findByIdAndUpdate(req.params.id, { $push: { exercises: req.body } })
-    .then(() => res.sendStatus(200))
+    .then((workout) => res.json(workout))
     .catch(err => console.log(err))
 })
 
